@@ -24,7 +24,7 @@ body{
     color: var(--text-color);
 }
 section{
-    height: 100vh;
+    min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 header{
@@ -52,12 +52,10 @@ header .logo{
     font-weight: 700;
     transition: .5s ease;
 }
-.navbar a:hover{
-    border-bottom: 2px solid var(--text-color);
-}
+
 .navbar a:hover,
 .navbar .active{
-    color: var(--text-color);
+    color: var(--main-color);
 }
 #menu-icon{
     font-size: 3.6rem;
@@ -182,7 +180,7 @@ span{
 }
 .services-container .services-box:hover{
     border-color: var(--main-color);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .services-box i{
     font-size: 7rem;
@@ -354,6 +352,25 @@ footer{
     #menu-icon{
         display: block;
     }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0,.2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
     .home{
         flex-direction: column;
     }
@@ -385,5 +402,26 @@ footer{
     }
     .Contact form div{
     flex-direction: column;
+   }
 }
+@media (max-width: 617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    .home-img img{
+        width: 80vw;
+        margin-top: 8rem;
+    }
+    .about-img img{
+        width: 100vw;
+        margin-top: 4rem;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    .Contact form .input-box input{
+        width: 100%;
+    }
 }
