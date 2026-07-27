@@ -50,3 +50,41 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop:true,
 })
+
+// تفعيل خدمة EmailJS
+emailjs.init("4PHGAKsJpFtIanlw3");
+
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // تجميع البيانات يدويًا من الحقول لتجنب مشاكل القراءة
+        const templateParams = {
+            user_name: this.querySelector('[name="user_name"]').value,
+            user_email: this.querySelector('[name="user_email"]').value,
+            user_number: this.querySelector('[name="user_number"]').value,
+            email_subject: this.querySelector('[name="email_subject"]').value,
+            message: this.querySelector('[name="message"]').value
+        };
+
+        emailjs.send('service_7mtonns', 'template_2770w3j', templateParams)
+            .then(function(response) {
+                Swal.fire({
+                   icon: 'success',
+                   title: 'تم الإرسال!',
+                   text: 'تم إرسال رسالتك بنجاح، سأتواصل معك قريباً 🚀',
+                   confirmButtonColor: '#00eeff' // لون يتناسب مع موقعك
+                });
+                contactForm.reset();
+            }, function(error) {
+                Swal.fire({
+                 icon: 'error',
+                 title: 'عذراً...',
+                 text: 'حدث خطأ أثناء الإرسال، حاول مجدداً! ❌'
+                });
+                console.log('FAILED...', error);
+            });
+    });
+}
