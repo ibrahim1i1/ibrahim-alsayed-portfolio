@@ -201,7 +201,7 @@ span{
 }
 .portfolio-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -294,6 +294,24 @@ span{
 .Contact form .btn{
     margin-top: 2em;
     cursor: pointer;
+}
+.Contact{
+    position: relative;
+}
+.contact-whats{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    background-color: #25d366;
+    border-radius: 3rem;
+    color: var(--text-color);  
+    font-weight: 500;
+    transition: .4s ease;
+}
+.contact-whats:hover{
+    box-shadow: 0 0 1rem #25d366;
 }
 footer{
     display: flex;
