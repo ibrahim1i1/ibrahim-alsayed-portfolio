@@ -367,6 +367,10 @@ footer{
     }
 }
 @media (max-width: 768px){
+    .portfolio-box .portfolio-layer{
+    transform: translateY(0%);
+    transition: .5s ease;
+    }
     #menu-icon{
         display: block;
     }
