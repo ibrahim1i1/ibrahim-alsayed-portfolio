@@ -99,6 +99,7 @@ span{
 }
 .home-content p{
     font-size: 1.6rem;
+    width: 70%;
 }
 .social-media a{
     display: inline-flex;
