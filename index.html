@@ -1,151 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İbrahim alsayed</title>
+    <title>İbrahim Seyid | Portfolio</title>
     <link rel="icon" type="image/png" href="images/icon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
-        <a href="#" class="logo">portfolio</a>
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <a href="#home" class="logo">portfolio</a>
+
+        <div class="header-actions">
+            <!-- أزرار تبديل اللغات -->
+            <div class="lang-switcher">
+                <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                <button type="button" class="lang-btn" data-lang="tr">TR</button>
+                <button type="button" class="lang-btn" data-lang="ar">AR</button>
+            </div>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </div>
+
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active" data-i18n="nav_home">Home</a>
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#services" data-i18n="nav_services">Services</a>
+            <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
         </nav>
     </header>
-    <!--header end-->
+
+    <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hi, Myself</h3>
-            <h1>İbrahim Seyid</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I build fast, responsive, and user-friendly websites using HTML, CSS, JavaScript. I'm available for freelance work and always excited to turn ideas into real websites.</p>
+            <h3 data-i18n="home_hi">Hi, Myself</h3>
+            <h1 data-i18n="home_name">İbrahim Seyid</h1>
+            <h3><span data-i18n="home_im">And I'm a</span> <span class="multiple-text"></span></h3>
+            <p data-i18n="home_desc">I build fast, responsive, and user-friendly websites using HTML, CSS, JavaScript. I'm available for freelance work and always excited to turn ideas into real websites.</p>
             <div class="social-media">
-                <a href="https://www.facebook.com/share/1Csj7vnmMu/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://x.com/brahim_sed" target="_blank"><i class="fa-brands fa-x"></i></a>
-                <a href="https://www.instagram.com/_ibrahim_alseyid?igsh=cG1rZXZqeTd6Y3N1" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/ibrahim-seyid-2abb26407?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/share/1Csj7vnmMu/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com/brahim_sed" target="_blank" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/_ibrahim_alseyid?igsh=cG1rZXZqeTd6Y3N1" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ibrahim-seyid-2abb26407?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="#" class="btn" data-i18n="home_cv_btn">Download CV</a>
         </div>
         <div class="home-img">
-            <img src="images/profiledp.png" alt="">
+            <img src="images/profiledp.png" alt="Profile Picture">
         </div>
     </section>
-    <!--home section end-->
+
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images/aboutpic.png" alt="">
+            <img src="images/aboutpic.png" alt="About Picture">
         </div>
         <div class="about-content">
-            <h2 class="heading">ABOUT <span>ME</span></h2>
-            <h3>Frontend Developer</h3>
-            <p>I started my journey in web development with a passion for learning and building real projects. I enjoy solving problems, creating responsive websites, and improving my skills every day. My goal is to become a professional Front-End Developer and build high-quality web applications.</p>
-            <a href="#" class="btn">Read More</a>
+            <h2 class="heading"><span data-i18n="about_heading_1">ABOUT</span> <span data-i18n="about_heading_2">ME</span></h2>
+            <h3 data-i18n="about_subtitle">Frontend Developer</h3>
+            <p data-i18n="about_desc">I started my journey in web development with a passion for learning and building real projects. I enjoy solving problems, creating responsive websites, and improving my skills every day. My goal is to become a professional Front-End Developer and build high-quality web applications.</p>
+            <a href="#" class="btn" data-i18n="about_read_more">Read More</a>
         </div>
     </section>
-    <!--about section end-->
+
+    <!-- Services Section -->
     <section class="services" id="services">
-        <h2 class="heading">My <span>services</span></h2>
+        <h2 class="heading"><span data-i18n="services_heading_1">My</span> <span data-i18n="services_heading_2">Services</span></h2>
         <div class="services-container">
             <div class="services-box">
                 <i class="fa-solid fa-code"></i>
-                <h3>Front-End Development</h3>
-                <p>Building modern and responsive websites using HTML, CSS, and JavaScript.</p>
-                <a href="#" class="btn">View Details</a>
+                <h3 data-i18n="service_1_title">Front-End Development</h3>
+                <p data-i18n="service_1_desc">Building modern and responsive websites using HTML, CSS, and JavaScript.</p>
+                <a href="#contact" class="btn" data-i18n="services_btn">View Details</a>
             </div>
 
             <div class="services-box">
                 <i class="fa-solid fa-palette"></i>
-                <h3>Responsive Web Design</h3>
-                <p>Creating websites that work perfectly on desktop, tablet, and mobile devices.</p>
-                <a href="#" class="btn">View Details</a>
+                <h3 data-i18n="service_2_title">Responsive Web Design</h3>
+                <p data-i18n="service_2_desc">Creating websites that work perfectly on desktop, tablet, and mobile devices.</p>
+                <a href="#contact" class="btn" data-i18n="services_btn">View Details</a>
             </div>
 
             <div class="services-box">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
-                <h3>Website Maintenance</h3>
-                <p>Updating, improving, and fixing websites for better performance and user experience.</p>
-                <a href="#" class="btn">View Details</a>
+                <h3 data-i18n="service_3_title">Website Maintenance</h3>
+                <p data-i18n="service_3_desc">Updating, improving, and fixing websites for better performance and user experience.</p>
+                <a href="#contact" class="btn" data-i18n="services_btn">View Details</a>
             </div>
         </div>
     </section>
-    <!--services section end-->
+
+    <!-- Portfolio Section -->
     <section class="Portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Projects</span></h2>
+        <h2 class="heading"><span data-i18n="portfolio_heading_1">Latest</span> <span data-i18n="portfolio_heading_2">Projects</span></h2>
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <a href="https://random-password-generator-dusky-rho.vercel.app/" target="_blank"><img src="images/6.jpg" alt=""></a>
-                <div class="portfolio-layer">
-                    <h4>Password Generator</h4>
-                    <p>Generate strong and secure passwords with customizable options using JavaScript.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </div>
+                <img src="images/6.jpg" alt="Password Generator">
+                <a href="https://random-password-generator-dusky-rho.vercel.app/" target="_blank" class="portfolio-layer" aria-label="Password Generator Project">
+                    <h4 data-i18n="proj_1_title">Password Generator</h4>
+                    <p data-i18n="proj_1_desc">Generate strong and secure passwords with customizable options using JavaScript.</p>
+                    <span class="icon-circle"><i class="fa-solid fa-up-right-from-square"></i></span>
+                </a>
             </div>
+
             <div class="portfolio-box">
-                <a href="https://cruds-phi-olive.vercel.app/" target="_blank"><img src="images/2.jpg" alt=""></a>
-                <div class="portfolio-layer">
-                    <h4>CRUD System</h4>
-                    <p>Create, update, delete, and search products using Local Storage.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </div>
+                <img src="images/2.jpg" alt="CRUD System">
+                <a href="https://cruds-phi-olive.vercel.app/" target="_blank" class="portfolio-layer" aria-label="CRUD System Project">
+                    <h4 data-i18n="proj_2_title">CRUD System</h4>
+                    <p data-i18n="proj_2_desc">Create, update, delete, and search products using Local Storage.</p>
+                    <span class="icon-circle"><i class="fa-solid fa-up-right-from-square"></i></span>
+                </a>
             </div>
+
             <div class="portfolio-box">
-                <a href="https://landing-page-apple-henna.vercel.app/" target="_blank"><img src="images/3.jpg" alt=""></a>
-                <div class="portfolio-layer">
-                    <h4>iPhone 13 Pro Max</h4>
-                    <p>An interactive and responsive Apple landing page with dynamic color switcher using HTML, CSS, and JavaScript.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </div>
+                <img src="images/3.jpg" alt="iPhone 13 Pro Max Landing Page">
+                <a href="https://landing-page-apple-henna.vercel.app/" target="_blank" class="portfolio-layer" aria-label="iPhone Landing Page Project">
+                    <h4 data-i18n="proj_3_title">iPhone 13 Pro Max</h4>
+                    <p data-i18n="proj_3_desc">An interactive and responsive Apple landing page with dynamic color switcher using HTML, CSS, and JavaScript.</p>
+                    <span class="icon-circle"><i class="fa-solid fa-up-right-from-square"></i></span>
+                </a>
             </div>
+
             <div class="portfolio-box">
-                <a href="https://food-lover-website-blue.vercel.app/" target="_blank"><img src="images/4.jpg" alt=""></a>
-                <div class="portfolio-layer">
-                    <h4>Food Lover</h4>
-                    <p>A modern and responsive food landing page showcasing delicious menus, recipes, and features.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </div>
+                <img src="images/4.jpg" alt="Food Lover Website">
+                <a href="https://food-lover-website-blue.vercel.app/" target="_blank" class="portfolio-layer" aria-label="Food Lover Project">
+                    <h4 data-i18n="proj_4_title">Food Lover</h4>
+                    <p data-i18n="proj_4_desc">A modern and responsive food landing page showcasing delicious menus, recipes, and features.</p>
+                    <span class="icon-circle"><i class="fa-solid fa-up-right-from-square"></i></span>
+                </a>
             </div>
         </div>
     </section>
-    <!--services section end-->
+
+    <!-- Contact Section -->
     <section class="Contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="#" id="contact-form">
-            <div>
+        <h2 class="heading"><span data-i18n="contact_heading_1">Contact</span> <span data-i18n="contact_heading_2">Me</span></h2>
+        <form id="contact-form">
+            <div class="form-row">
                 <div class="input-box">
-                    <input type="text" name="user_name" placeholder="Full Name" required>
-                    <input type="email" name="user_email" placeholder="Email Address" required>
+                    <input type="text" name="user_name" placeholder="Full Name" data-placeholder="input_name" required>
+                    <input type="email" name="user_email" placeholder="Email Address" data-placeholder="input_email" required>
                 </div>
                 <div class="input-box"> 
-                    <input type="number" name="user_number" placeholder="Mobile Number" required>
-                    <input type="text" name="email_subject" placeholder="Subject" required>
+                    <input type="tel" name="user_number" placeholder="Mobile Number" data-placeholder="input_phone" required>
+                    <input type="text" class="phone-number" name="email_subject" placeholder="Subject" data-placeholder="input_subject" required>
                 </div>
             </div>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
-            <input type="submit" value="Send Message" class="btn" required>
+            <textarea name="message" cols="30" rows="8" placeholder="Your Message..." data-placeholder="input_msg" required></textarea>
+            <input type="submit" value="Send Message" class="btn" data-value="input_send">
         </form>
-        <div class="contact-whatsApp">
-            <a href="https://wa.me/message/ANKIOVTWI4HQF1" target="_blank" class="contact-whats"><i class="fa-brands fa-whatsapp"></i> whatsApp</a>
-        </div>
     </section>
-    <!--contact section end-->
+
+    <!-- زر واتساب عائم -->
+    <a href="https://wa.me/message/ANKIOVTWI4HQF1" target="_blank" class="contact-whats" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i> <span data-i18n="whatsapp_text">WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-text">
-            <p>Copyright &copy 2026 by İbrahim seyid | All Rights Reserved.</p>
+            <p data-i18n="footer_copy">Copyright &copy; 2026 by İbrahim Seyid | All Rights Reserved.</p>
         </div>
         <div class="footer-iconTop">
-            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            <a href="#home" aria-label="Back to top"><i class="fa-solid fa-angle-up"></i></a>
         </div>
     </footer>
-    <!--footer end-->
+
+    <!-- Scripts CDN -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
